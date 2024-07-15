@@ -1,0 +1,11 @@
+@import 'var';
+@import 'fonts';
+@import 'normalize';
+@include normalize();
+@import 'default';
+@import 'icons';
+@import 'blocks/header';
+@import 'blocks/contacts-info';
+@import 'blocks/nav';
+@import 'blocks/search-form';
+@import 'blocks/services';

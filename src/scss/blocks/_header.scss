@@ -1,0 +1,177 @@
+.header {
+  background-color: $lightBg;
+  @include tablet {
+
+  }
+  @include desktop {
+
+  }
+&__logo {
+  &_mobile {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+  &_common {
+    display: block;
+    @include tablet {
+      display: none;
+    }
+  }
+}
+  &__bottom-line {
+    background-color: $mainDark;
+    &>.container  {
+      display: flex;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+    }
+  }
+  &__content {
+    background-color: $white;
+  &>.container  {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 8px;
+    @include tablet {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+  }
+  }
+  &__top {
+    display: none;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 20px;
+      padding-top: 16px;
+      padding-bottom: 11px;
+    }
+    @include desktop {
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+  }
+
+  &__callbck-btn {
+    position: relative;
+    color: $accentColor;
+    font-size: 14px;
+    font-weight: 400;
+    align-self: self-start;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: $lightRed;
+      height: 1px;
+      content: "";
+    }
+
+    @include desktop {
+      align-self: auto;
+    }
+  }
+
+
+
+.logo-link {
+  &__image {
+    @include tablet {
+      width: 179px;
+      height: 50px;
+    }
+  }
+}
+
+  &__search-btn {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url(../../assets/icons/search-icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 21px;
+    background-color: $lightBg;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: 30px;
+    @include tablet {
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+}
+
+.user-link, .favourite-link, .cart-link {
+  border: 1px solid $gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+
+  &__icon {
+    flex-shrink: 0;
+    color: $gray;
+
+    &_heart, &_cart {
+      width: 24px;
+      height: 24px;
+    }
+
+  }
+}
+.user-link {
+  @include tablet {
+    margin-left: auto;
+    margin-right: 30px;
+  }
+}
+.favourite-link {
+  margin-left: auto;
+  margin-right: 20px;
+  @include tablet {
+    margin-left: 0;
+    margin-right: 15px;
+  }
+}
+.cart-block {
+  display: flex;
+  column-gap: 15px;
+
+  &__details {
+    display: none;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+    }
+  }
+
+  &__content {
+    color: $accentColorLight;
+    font-size: 11px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 140%;
+  }
+}
